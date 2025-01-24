@@ -33,18 +33,31 @@ body {
 }
 
 /* Style container utama */
+/* Style container utama */
 .container {
-    background: rgba(255, 255, 255, 0.2);
+    background: url('img/frame.png') no-repeat center center; /* Gunakan gambar frame.png */
+    background-size: cover; /* Gambar disesuaikan tanpa terpotong */
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 90%;
-    max-width: 400px;
-    display: flex; /* Menggunakan flexbox untuk elemen di dalamnya */
-    flex-direction: column; /* Agar elemen dalam container ditata secara vertikal */
-    justify-content: center; /* Memastikan konten terpusat secara vertikal */
-    align-items: center; /* Memastikan konten terpusat secara horizontal */
+    width: 100%;
+    max-width: 400px; /* Batas maksimum lebar */
+    height: 600px; /* Tinggi default container */
+    margin: 20px auto; /* Membuat container berada di tengah */
+    display: flex;
+    flex-direction: column; /* Elemen dalam container vertikal */
+    justify-content: center; /* Pusatkan konten secara vertikal */
+    align-items: center; /* Pusatkan konten secara horizontal */
+    box-sizing: border-box;
+}
+
+/* Media Query untuk Responsivitas */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Lebar container untuk layar kecil */
+        height: auto; /* Tinggi otomatis menyesuaikan isi */
+    }
 }
 
 /* Judul utama */
@@ -65,13 +78,31 @@ body {
     color: #ffecec;
 }
 
-/* Main text */
+/* Main text with game-like effect */
 .main-text {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-family: 'Oleo Script', cursive;
+    font-size: 28px; /* Ukuran font lebih besar */
+    font-weight: bold;
     text-transform: uppercase;
-    color: #ffffff;
+    text-align: center;
+    background: linear-gradient(90deg, #ff6b8d, #ff90b5, #2575fc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; /* Membuat hanya gradien yang terlihat */
+    text-shadow: 2px 2px 0 #000, 4px 4px 0 rgba(0, 0, 0, 0.5); /* Bayangan untuk efek 3D */
+    letter-spacing: 2px; /* Memberi jarak antar huruf */
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate; /* Efek bersinar */
+}
+
+/* Animasi glow untuk membuat teks lebih hidup */
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 0 #000, 4px 4px 10px rgba(255, 107, 141, 0.5);
+    }
+    100% {
+        text-shadow: 2px 2px 0 #000, 4px 4px 20px rgba(255, 107, 141, 1);
+    }
 }
 
 /* Deskripsi */
