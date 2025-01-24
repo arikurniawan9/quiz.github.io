@@ -1,0 +1,58 @@
+/* Reset default tombol */
+/* Animasi fade-out */
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+  
+button {
+    all: unset;
+    cursor: pointer;
+  }
+  
+  /* Gaya tombol utama */
+  button.gradient-button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c, #fd3c74, #fc296a);
+    background-size: 300%;
+    transition: all 0.3s ease;
+  }
+  
+  /* Efek hover untuk gradasi */
+  button.gradient-button:hover {
+    background-position: right;
+    box-shadow: 0 4px 15px rgba(252, 41, 106, 0.5);
+    transform: scale(1.05);
+  }
+  
+  /* Efek garis animasi */
+  button.gradient-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ffffff, #fc296a, #ff758c, #ffffff);
+    background-size: 200%;
+    z-index: -1;
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+  
+  button.gradient-button:hover::before {
+    opacity: 1;
+    background-position: right;
+  }
+  

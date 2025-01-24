@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Memulai</title>
+  <link rel="stylesheet" href="assets/button.css">
+  <link rel="stylesheet" href="assets/awal.css"> <!-- Link ke file CSS terpisah -->
+</head>
+<body>
+  <div class="container">
+    <h2 class="subtitle">Let’s chat and chill</h2>
+    <h1>BELAJAR MEMULAI</h1>
+    <p class="main-text">INFORMATION COMMUNICATION AT SCHOOL</p>
+    <p class="description">Talking about class schedules and school subjects</p>
+    <button class="start-button" id="next-button">
+      <span class="icon">2</span>
+      Start Learning
+    </button>
+  </div>
+
+  <script>
+    // Ambil tombol dan tambahkan event listener
+    const nextButton = document.getElementById("next-button");
+
+    nextButton.addEventListener("click", function () {
+      // Tambahkan kelas fade-out ke body untuk animasi transisi
+      document.body.classList.add("fade-out");
+
+      // Tunggu animasi selesai sebelum pindah halaman
+      setTimeout(() => {
+        window.location.href = "next.html"; // Halaman tujuan
+      }, 500); // Waktu sesuai durasi animasi (0.5s)
+    });
+  </script>
+</body>
+</html>

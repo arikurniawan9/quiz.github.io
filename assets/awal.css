@@ -1,0 +1,171 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2b1b87, #612b9a, #fa4eab, #ee6265);
+    background-size: 300% 300%;
+    animation: gradient-animation 6s infinite ease-in-out;
+    color: #ffffff;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Animasi gradien untuk background */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Style container utama */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    display: flex; /* Menggunakan flexbox untuk elemen di dalamnya */
+    flex-direction: column; /* Agar elemen dalam container ditata secara vertikal */
+    justify-content: center; /* Memastikan konten terpusat secara vertikal */
+    align-items: center; /* Memastikan konten terpusat secara horizontal */
+}
+
+/* Judul utama */
+.container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #ffecec;
+}
+
+/* Main text */
+.main-text {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+/* Deskripsi */
+.description {
+    font-size: 14px;
+    font-weight: 400;
+    color: #e0d7ff;
+    margin-bottom: 20px;
+}
+
+/* Style untuk tombol utama (Start button) */
+.start-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #ff6b8d, #ff90b5);
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 107, 141, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.7s ease; /* Menambah durasi transisi untuk lebih halus */
+}
+
+/* Efek hover pada tombol start */
+.start-button:hover {
+    transform: scale(1.03); /* Efek scale yang lebih kecil untuk transisi lebih halus */
+    box-shadow: 0 8px 20px rgba(255, 107, 141, 0.7);
+    background: linear-gradient(45deg, #1e3c72, #2a5298, #6a11cb, #2575fc); /* Gradien baru */
+}
+
+/* Style untuk icon dalam tombol start */
+.start-button .icon {
+    background: #ffffff;
+    color: #ff6b8d;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 10px;
+    padding: 4px 8px;
+    border-radius: 50%;
+}
+
+/* Animasi fade-out */
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+/* Style untuk tombol menu yang akan digunakan di halaman menu */
+.menu-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff6b8d, #ff90b5);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Efek hover pada tombol menu */
+.menu-button:hover {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    transform: scale(1.05);
+}
+
+/* Efek klik pada tombol menu */
+.menu-button:active {
+    transform: scale(1);
+}
+
+/* Style untuk tombol kembali */
+#back-button {
+    background: #ff6b8d;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+/* Efek hover pada tombol kembali */
+#back-button:hover {
+    background: #1e3c72;
+}

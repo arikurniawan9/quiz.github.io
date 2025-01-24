@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="assets/menu.css">
+</head>
+<body>
+  <div class="menu-container">
+    <!-- Ikon Rumah -->
+    <div class="header">
+      <button class="home-btn">🏠</button>
+    </div>
+    <!-- Menambahkan backsound -->
+    <audio id="background-music" autoplay loop>
+        <source src="assets/sound/menu.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Daftar Menu -->
+    <div class="menu-list">
+      <button class="menu-item">Unit 1: Talking about your class schedule</button>
+      <button class="menu-item">Unit 2: Talking about your favorite school subjects</button>
+      <button class="menu-item">Unit 3: Making plans with friends during break</button>
+      <button class="menu-item">Unit 4: Review & Practice</button>
+      <button class="menu-item exit-btn" id="back-button">Exit</button>
+    </div>
+    
+    <!-- Ikon bawah -->
+    <div class="footer">
+      <button class="footer-btn">🎤</button>
+      <button class="footer-btn">🖊️</button>
+      <button class="footer-btn">🗑️</button>
+    </div>
+  </div>
+  <script src="assets/awal.js"></script>
+  <script>
+    // Tambahkan event listener untuk tombol kembali
+    document.getElementById("back-button").addEventListener("click", function () {
+      // Tampilkan pesan konfirmasi
+      const confirmation = confirm("Apakah Anda yakin ingin keluar?");
+      if (confirmation) {
+        window.location.href = "index.html"; // Kembali ke halaman sebelumnya
+      }
+    });
+  </script>
+
+</body>
+</html>
